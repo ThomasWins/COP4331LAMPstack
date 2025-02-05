@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(212, 185, 128);
+}
+
+#title {
+    font-size: 40px;
+    width: 100%;
+    margin: 2%;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+}
+
+#loginDiv {
+    font-size: 30px;
+    width: 70%;
+    height:auto;
+    margin:auto;
+    padding: 35px;
+    background-color: #e5e5e5;
+}
+
+#inner-title {
+    display: inline-block;
+    font-size: .8em;
+    width: 90%;
+    text-align: center;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    opacity: 60%;
+}
+
+.buttons {
+    font-size: 30px;
+    border-radius: 25px;
+    width: 50%;
+    margin-left: 25%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.buttons:hover {
+    background-color: #3bc1e04f;
+    color: #FFFFFF;
+    opacity: 50%;
+}
+
+#loginName {
+    font-size: 30px;
+}
+
+#loginPassword {
+    font-size: 30px;
+}
+
+input[type="text"],
+input[type="password"] {
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#createAccount {
+    text-align: center;
+    display:block;
+    margin-block: 2%;
+    font-size: .6em;
+    font-family: 'Montserrat', sans-serif;
+}
