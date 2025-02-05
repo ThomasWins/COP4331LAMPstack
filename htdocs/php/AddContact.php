@@ -2,11 +2,11 @@
 	$inData = getRequestInfo();
 	
 	$name = $inData["name"];
-    $email = $inData["email"];
-    $phone = $inData["phone"];
+    	$email = $inData["email"];
+    	$phone = $inData["phone"];
 	$userId = $inData["userId"];
 
-	$conn = new mysqli("localhost", "Group16 ", "CM2025Lamp!", "contact_manager");
+	$conn = new mysqli("localhost", "Group16", "CM2025Lamp!", "contact_manager");
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
