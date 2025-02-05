@@ -13,7 +13,7 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("INSERT into contacts (UserId,Name,Email,Phone) VALUES(?,?,?,?)");
+		$stmt = $conn->prepare("INSERT into contacts (UserID,Name,Email,Phone) VALUES(?,?,?,?)");
 		$stmt->bind_param("isss", $userId, $name, $email, $phone);
 		$stmt->execute();
 		$stmt->close();
