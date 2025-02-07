@@ -1,5 +1,6 @@
 body {
-    background-color: rgb(212, 185, 128);
+    background-image: url("ucfimage.avif");
+    background-position: center;
 }
 
 #title {
@@ -14,11 +15,12 @@ body {
 
 #loginDiv {
     font-size: 30px;
-    width: 70%;
+    border-radius: 25px;
+    width: 65%;
     height:auto;
     margin:auto;
     padding: 35px;
-    background-color: #e5e5e5;
+    background-color: rgba(255,255,255,.94);
 }
 
 #inner-title {
@@ -34,31 +36,36 @@ body {
 }
 
 .buttons {
-    font-size: 30px;
-    border-radius: 25px;
+    font-size: 26px;
+    color:#FFFFFF;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     width: 50%;
     margin-left: 25%;
+    background-color: rgb(0,0,200);
+    opacity:60%;
     font-family: 'Montserrat', sans-serif;
 }
 
 .buttons:hover {
-    background-color: #3bc1e04f;
+    background-color: rgb(0, 0, 128);
+    cursor:pointer;
     color: #FFFFFF;
-    opacity: 50%;
 }
 
 #loginName {
-    font-size: 30px;
+    font-size: 28px;
 }
 
 #loginPassword {
-    font-size: 30px;
+    font-size: 28px;
 }
 
 input[type="text"],
 input[type="password"] {
     border-radius: 5px;
-    text-align: center;
+    border: 1.5px solid rgba(0, 100, 255, 0.3);
+    text-align: left;
     width: 80%;
     margin-left: 10%;
     margin-bottom: 2%;
