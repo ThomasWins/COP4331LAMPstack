@@ -79,3 +79,22 @@ input[type="password"] {
     font-size: .6em;
     font-family: 'Montserrat', sans-serif;
 }
+
+/* Contacts Page */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
