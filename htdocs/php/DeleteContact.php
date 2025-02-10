@@ -4,7 +4,7 @@
 
     $Id = $inData["Id"];
 
-    $conn = new mysqli("localhost", "Group16", "CM205Lamp!", "contact_manager");
+    $conn = new mysqli("localhost", "Group16", "CM2025Lamp!", "contact_manager");
 
     if($conn->connect_error)
     {
