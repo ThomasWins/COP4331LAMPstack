@@ -7,7 +7,7 @@
     $phone = $inData["phone"];
     $email = $inData["email"];
 
-    $conn = new mysqli("localhost", "Group16", "CM205Lamp", "contact_manager");
+    $conn = new mysqli("localhost", "Group16", "CM205Lamp!", "contact_manager");
     if($conn->connect_error)
     {
         returnWithError($conn->connect_error);
