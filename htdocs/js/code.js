@@ -1,4 +1,4 @@
-const urlBase = 'http://proctest.christopherjparrett.xyz/php/';
+const urlBase = 'http://proctest.christopherjparrett.xyz/php';
 const extension = 'php';
 
 
