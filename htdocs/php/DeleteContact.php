@@ -2,7 +2,7 @@
 
     $inData = getRequestInfo();
 
-    $Id = $inData["Id"];
+    $id = $inData["Id"];
 
     $conn = new mysqli("localhost", "Group16", "CM2025Lamp!", "contact_manager");
 
@@ -13,16 +13,16 @@
     else
     {
         $stmt = $conn->prepare("SELECT ID FROM contacts WHERE ID=?");
-        $stmt->bind_param("i", $Id);
+        $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt->get_result();
 
         if($row = $result->fetch_assoc())
-        {
-            returnWithInfo( $row['ID'] );   
+        { 
             $stmt = $conn->prepare("DELETE FROM contacts WHERE ID=?");
-            $stmt->bind_param("i", $Id); //should this be userID?
+            $stmt->bind_param("i", $id); //should this be userID?
             $stmt->execute();
+            returnWithConfirm();
         }
         else
         {
@@ -43,9 +43,9 @@
 		sendResultInfoAsJson( $retValue );
 	}
 
-    function returnWithInfo($id)
+    function returnWithConfirm()
 	{
-		$retValue = '{"id":' . $id . '","error":""}';
+		$retValue = '{"id":"","error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
 

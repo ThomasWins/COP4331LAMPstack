@@ -2,7 +2,7 @@
 
     $inData = getRequestInfo();
 
-    $Id = $inData["Id"];
+    $id = $inData["Id"];
     $name = $inData["name"];
     $phone = $inData["phone"];
     $email = $inData["email"];
@@ -15,15 +15,16 @@
     else
     {
         $stmt = $conn->prepare("SELECT ID FROM contacts WHERE ID=?");
-        $stmt->bind_param("i", $Id);
+        $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt->get_result();
 
         if($row = $result->fetch_assoc())
         {
             $stmt = $conn->prepare("UPDATE contacts SET (Email,Phone,Name) VALUES(?,?,?) WHERE ID=?");
-            $stmt->bind_param("sssi", $email, $phone, $name, $Id);
+            $stmt->bind_param("sssi", $email, $phone, $name, $id);
             $stmt->execute();
+            returnWithConfirm();
         }
         else
         {
@@ -44,4 +45,15 @@
 		sendResultInfoAsJson( $retValue );
 	}
 
+    function returnWithConfirm()
+	{
+		$retValue = '{"id":"","error":""}';
+		sendResultInfoAsJson( $retValue );
+	}
+
+    function sendResultInfoAsJson( $obj )
+	{
+		header('Content-type: application/json');
+		echo $obj;
+	}  
 ?>
