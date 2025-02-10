@@ -3,8 +3,8 @@
     $inData = getRequestInfo();
         
     $id = 0;
-    $username = $inData["loginName"];
-    $password = $inData["loginPassword"];
+    $username = $inData["login"];
+    $password = $inData["password"];
 
     $conn = new mysqli("localhost", "Group16", "CM2025Lamp!", "contact_manager");
     if( $conn->connect_error )
