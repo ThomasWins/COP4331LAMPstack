@@ -114,3 +114,10 @@ function saveCookie()
 	date.setTime(date.getTime()+(minutes*60*1000));	
 	document.cookie = "userId=" + userId + ";expires=" + date.toGMTString();
 }
+
+function signOut()
+{
+	userId = 0;
+	document.cookie = "firstName= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+	window.location.href = "index.html";
+}

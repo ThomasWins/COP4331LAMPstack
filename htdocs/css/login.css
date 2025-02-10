@@ -58,16 +58,9 @@ body {
     color: #FFFFFF;
 }
 
-#loginName {
-    font-size: 28px;
-}
-
-#loginPassword {
-    font-size: 28px;
-}
-
 input[type="text"],
 input[type="password"] {
+    font-size: 28px;
     border-radius: 5px;
     border: 1.5px solid rgba(0, 100, 255, 0.3);
     text-align: left;
