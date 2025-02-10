@@ -2,7 +2,7 @@
 
     $inData = getRequestInfo();
 
-    $userId = $inData["userId"];
+    $Id = $inData["Id"];
 
     $conn = new mysqli("localhost", "Group16", "CM205Lamp", "contact_manager");
 
@@ -13,7 +13,7 @@
     else
     {
         $stmt = $conn->prepare("SELECT ID FROM contacts WHERE ID=?");
-        $stmt->bind_param("s", $userId);
+        $stmt->bind_param("i", $Id);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -21,7 +21,7 @@
         {
             returnWithInfo( $row['ID'] );   
             $stmt = $conn->prepare("DELETE FROM contacts WHERE ID=?");
-            $stmt->bind_param("s", $row['ID']); //should this be userID?
+            $stmt->bind_param("i", $Id); //should this be userID?
             $stmt->execute();
         }
         else

@@ -12,9 +12,10 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("select ID, Name, Phone, Email from contacts where Name like ? and UserID=?");
+		$stmt = $conn->prepare("SELECT ID, Name, Phone, Email FROM contacts WHERE Name LIKE ? AND UserID=? ORDER BY Name LIMIT 10 OFFSET ?");
 		$name = "%" . $inData["search"] . "%";
-		$stmt->bind_param("ss", $name, $inData["userId"]);
+		$page = 10*($inData["page"]-1);
+		$stmt->bind_param("sii", $name, $inData["userId"], $page);
 		$stmt->execute();
 		
 		$result = $stmt->get_result();

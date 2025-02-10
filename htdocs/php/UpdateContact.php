@@ -2,7 +2,7 @@
 
     $inData = getRequestInfo();
 
-    $userId = $inData["userId"];
+    $Id = $inData["Id"];
     $name = $inData["name"];
     $phone = $inData["phone"];
     $email = $inData["email"];
@@ -15,14 +15,14 @@
     else
     {
         $stmt = $conn->prepare("SELECT ID FROM contacts WHERE ID=?");
-        $stmt->bind_param("s", $userId);
+        $stmt->bind_param("i", $Id);
         $stmt->execute();
         $result = $stmt->get_result();
 
         if($row = $result->fetch_assoc())
         {
-            $stmt = $conn->prepare("UPDATE contacts (Email,Phone,Name) VALUES(?,?,?)");
-            $stmt->bind_param("sss", $email, $phone, $name);
+            $stmt = $conn->prepare("UPDATE contacts SET (Email,Phone,Name) VALUES(?,?,?) WHERE ID=?");
+            $stmt->bind_param("sssi", $email, $phone, $name, $Id);
             $stmt->execute();
         }
         else

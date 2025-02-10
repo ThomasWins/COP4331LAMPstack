@@ -13,8 +13,8 @@
     }
     else
     {
-        $stmt = $conn->prepare("SELECT ID FROM users WHERE Username=? AND Password=?");
-        $stmt->bind_param("ss", $username, $password);
+        $stmt = $conn->prepare("SELECT ID FROM users WHERE Username=?");
+        $stmt->bind_param("s", $username);
         $stmt->execute();
         $result = $stmt->get_result();
 
