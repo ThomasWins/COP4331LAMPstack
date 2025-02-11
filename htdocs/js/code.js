@@ -93,6 +93,7 @@ function createAccount()
 				
 				if(err!=""){
 					document.getElementById("createAccountResult").innerHTML = err;
+					return;
 				}
 	
 				window.location.href = "index.html";
