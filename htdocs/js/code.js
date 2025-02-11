@@ -62,12 +62,12 @@ function createAccount()
 	//	var hash = md5( password );
 	if(password==null || password == ""){
 	//the user hit button without entering password so we can just fail here
-		document.getElementById("LoginResult").innerHTML = "Please enter a password";
+		document.getElementById("createAccountResult").innerHTML = "Please enter a password";
 		return;
 	}
 	else if(password!=confirm){
 	//this means that the user input 2 different passwords
-		document.getElementById("LoginResult").innerHTML = "Passwords do not match";
+		document.getElementById("createAccountResult").innerHTML = "Passwords do not match";
 		return;
 	}
 	document.getElementById("createAccountResult").innerHTML = "";
