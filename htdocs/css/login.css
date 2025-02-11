@@ -25,6 +25,7 @@ body {
     margin:auto;
     padding: 35px;
     background-color: rgba(255,255,255,.94);
+    text-align: center;
 }
 
 #inner-title {
@@ -32,7 +33,6 @@ body {
     font-size: .8em;
     width: 90%;
     text-align: center;
-    margin-left: 5%;
     margin-bottom: 2%;
     font-family: 'Montserrat', sans-serif;
     color: #000000;
@@ -45,7 +45,6 @@ body {
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     width: 50%;
-    margin-left: 25%;
     background-color: rgb(0,0,200);
     opacity:60%;
     font-family: 'Montserrat', sans-serif;
@@ -65,7 +64,6 @@ input[type="password"] {
     border: 1.5px solid rgba(0, 100, 255, 0.3);
     text-align: left;
     width: 80%;
-    margin-left: 10%;
     margin-bottom: 2%;
     font-family: 'Montserrat', sans-serif;
 }
@@ -78,9 +76,6 @@ input[type="password"] {
     font-family: 'Montserrat', sans-serif;
 }
 
-#loginResult, #createAccountResult{
-    text-align: center;
-}
 
 /* Contacts Page */
 
