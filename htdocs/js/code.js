@@ -136,8 +136,9 @@ function readCookie()
 		}
 	}
 	current = new Date();
+	console.log(data<current);
 	console.log(userId + " " + date);
-	if( userId < 0 || date<current)
+	if( userId < 0 || (date<current))
 	{
 		window.location.href = "index.html";
 	}
@@ -149,7 +150,6 @@ function readCookie()
 
 function signOut()
 {
-	userId = 0;
-	document.cookie = "firstName= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+	document.cookie = "userId=-1 ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 	window.location.href = "index.html";
 }
