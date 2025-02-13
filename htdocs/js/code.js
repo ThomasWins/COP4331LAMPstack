@@ -116,6 +116,35 @@ function saveCookie()
 	document.cookie = "userId=" + userId + ";expires=" + date.toGMTString();
 }
 
+function readCookie()
+{
+	userId = -1;
+	date = "Thu, 01 Jan 1970 00:00:00 GMT";
+	let data = document.cookie;
+	let splits = data.split(",");
+	for(var i = 0; i < splits.length; i++) 
+	{
+		let thisOne = splits[i].trim();
+		let tokens = thisOne.split("=");	
+		if( tokens[0] == "userId" )
+		{
+			userId = parseInt( tokens[1].trim() );
+		}
+		else if( tokens[0] == "expires"){
+			date = Date.parse(tokens[1].trim());
+		}
+	}
+	current = new Date();
+	if( userId < 0 || expires<current)
+	{
+		window.location.href = "index.html";
+	}
+	else
+	{
+//		document.getElementById("userName").innerHTML = "Logged in as " + firstName + " " + lastName;
+	}
+}
+
 function signOut()
 {
 	userId = 0;
