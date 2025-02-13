@@ -121,6 +121,7 @@ function readCookie()
 	userId = -1;
 	date = "Thu, 01 Jan 1970 00:00:00 GMT";
 	let data = document.cookie;
+	console.log(data);
 	let splits = data.split(",");
 	for(var i = 0; i < splits.length; i++) 
 	{
@@ -136,7 +137,7 @@ function readCookie()
 	}
 	current = new Date();
 	console.log(userId + " " + date);
-	if( userId < 0 || expires<current)
+	if( userId < 0 || date<current)
 	{
 		window.location.href = "index.html";
 	}
