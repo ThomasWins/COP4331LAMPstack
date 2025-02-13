@@ -7,6 +7,26 @@
 </head>
 
 <body id="contactsBody" onload="checkQueries()">
+    <div class="popup-container" id="popup1">
+        <div class="popup-content">
+        <h2>Add Contact</h2>
+        <input type="text" id="ContactName" placeholder="Name" /><br />
+        <input type="text" id="ContactEmail" placeholder="Email" /><br />
+        <input type="text" id="ContactPhone" placeholder="Phone" /><br />
+        <button  id="SaveContactAdd"  onclick="addContact();">Add</button>
+        <button class="close-btn" id="closePopup1">Close</button>
+        </div>
+    </div>
+    <div class="popup-container" id="popup2">
+        <div class="popup-content">
+        <h2>Edit Contact</h2>
+        <input type="text" id="ContactName" placeholder="Name" /><br />
+        <input type="text" id="ContactEmail" placeholder="Email" /><br />
+        <input type="text" id="ContactPhone" placeholder="Phone" /><br />
+        <button  id="SaveContactAdd">Add</button>
+        <button class="close-btn" id="closePopup2">Close</button>
+        </div>
+    </div>
     <button type="button" id="signout" class="signOut" onclick="signOut();"> Sign Out </button>
     <h1>Contacts List</h1>
     <div id="inner-body">
@@ -32,7 +52,7 @@
             <button type="button" id="page-for" class="buttons" onclick="pageForward();"> Next Page</button>
         </div>
         <div style="text-align: center">
-            <button type="button" id="addContact" class="buttons" onclick="addContact();"> Add Contact </button>
+            <button type="button" id="openPopup1" class="buttons"> Add Contact </button>
         </div>
     </div>
 </body>
@@ -42,6 +62,49 @@
         if (e.key == "Enter") {
             search(document.getElementById('search').value)
         }
+    });
+
+    //code for the popup elements
+    // Get elements
+    const popup = document.getElementById('popup1');
+    const openPopupButton = document.getElementById('openPopup1');
+    const closePopupButton = document.getElementById('closePopup1');
+
+    // Open the popup
+    openPopupButton.addEventListener('click', () => {
+      popup.style.display = 'flex';
+    });
+
+    // Close the popup
+    closePopupButton.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+
+    // Close the popup when clicking outside the content
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) {
+        popup.style.display = 'none';
+      }
+    });
+    const popup2 = document.getElementById('popup2');
+    const openPopupButton2 = document.getElementById('openPopup2');
+    const closePopupButton2 = document.getElementById('closePopup2');
+
+    // Open the popup
+    openPopupButton2.addEventListener('click', () => {
+      popup2.style.display = 'flex';
+    });
+
+    // Close the popup
+    closePopupButton2.addEventListener('click', () => {
+      popup2.style.display = 'none';
+    });
+
+    // Close the popup when clicking outside the content
+    popup2.addEventListener('click', (e) => {
+      if (e.target === popup2) {
+        popup2.style.display = 'none';
+      }
     });
 </script>
 

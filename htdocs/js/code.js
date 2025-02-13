@@ -193,7 +193,7 @@ function buildTable(data){
 		var newRow = tbody.insertRow();
 		newRow.innerHTML = '<td>'+row.Name+ '</td><td>' + row.Email + '</td><td>+'
 		+row.Phone+'</td><td><button type="button" class="settings" onclick="removeContact('+row.ID+
-		');">Remove</button><button type="button" class="editContact" onclick="editContact('+row.ID+');">Edit</button></td>'
+		');">Remove</button><button type="button" class="editContact" id="openPopup2" onclick="editContact('+row.ID+');">Edit</button></td>'
 	}
 }
 function saveCookie()
