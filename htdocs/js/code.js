@@ -249,8 +249,3 @@ function signOut()
 	window.location.href = "index.html";
 }
 
-document.getElementById('search').addEventListener("keypress", function(e){
-	if(e.key == "Enter"){
-		search(document.getElementById('search').value)
-	}
-});

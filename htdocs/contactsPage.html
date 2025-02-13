@@ -37,5 +37,11 @@
         
 </body>
 
-
+<script>
+    document.getElementById('search').addEventListener("keypress", function(e){
+	if(e.key == "Enter"){
+		search(document.getElementById('search').value)
+	}
+});
+</script>
 </html>
