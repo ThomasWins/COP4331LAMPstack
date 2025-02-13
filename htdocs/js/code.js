@@ -135,6 +135,7 @@ function readCookie()
 		}
 	}
 	current = new Date();
+	console.log(userId + " " + date);
 	if( userId < 0 || expires<current)
 	{
 		window.location.href = "index.html";
