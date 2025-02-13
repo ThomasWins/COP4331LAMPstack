@@ -82,7 +82,6 @@ input[type="password"]{
     border: 1.5px solid rgba(0, 100, 255, 0.3);
     text-align: left;
     width: 60%;
-    margin-bottom: 2%;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -141,7 +140,7 @@ th {
 
 #inner-body {
     background-color:rgb(46, 46, 46);
-    padding-top: 50px;
+    padding-top: 10px;
     padding-bottom: 50px;
 }
 
@@ -174,11 +173,12 @@ th {
     color: #FFFFFF;
 }
 .signOut {
-    background-color: rgb(101, 101, 101);
+    background-color: rgb(180, 180, 180);
     border-width: 1.2px;
     border-radius: 2px;
     color: #FFFFFF;
-    width: 66px;
+    width: 100px;
+    font-size: 1.5em;
     transition: all ease-in-out .2s;
 }
 .signOut:hover {
