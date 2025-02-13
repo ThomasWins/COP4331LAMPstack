@@ -2,46 +2,47 @@
 
 <head>
     <title>Contacts Page</title>
-    <title1><button type="button" id="signout" class="signOut" onclick="signOut();"> Sign Out </button></title1>
     <script type="text/javascript" src="js/code.js" onload="readCookie()"></script>
     <link href="css/login.css" rel="stylesheet">
 </head>
 
 <body id="contactsBody" onload="checkQueries()">
-
-    <h2>Contacts List</h2>
-    <div id="input-group">
-        <input type ="search" id="search" placeholder="Search Contacts">
-        <button type = "button" id="search-all" class="buttons" onclick="search('%');">Search All</button>
+    <button type="button" id="signout" class="signOut" onclick="signOut();"> Sign Out </button>
+    <h1>Contacts List</h1>
+    <div id="inner-body">
+        <div id="input-group">
+            <input type="search" id="search" placeholder="Search Contacts">
+            <button type="button" id="search-all" class="buttons" onclick="search('%');">Search All</button>
+        </div>
+        <span id="searchError"></span>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="contactsTableBody">
+            </tbody>
+        </table>
+        <div id="pageRow">
+            <button type="button" id="page-back" class="buttons" onclick="pageBack();"> Previous Page</button>
+            <button type="button" id="page-for" class="buttons" onclick="pageForward();"> Next Page</button>
+        </div>
+        <div style="text-align: center">
+            <button type="button" id="addContact" class="buttons" onclick="addContact();"> Add Contact </button>
+        </div>
     </div>
-    <span id="searchError"></span> 
-    <table id="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody id="contactsTableBody">
-        </tbody>
-    </table>
-    <div id="pageRow">
-        <button type = "button" id="page-back" class="buttons" onclick="pageBack();"> Previous Page</button>
-        <button type = "button" id="page-for" class="buttons" onclick="pageForward();"> Next Page</button>
-    </div>
-    <div style="text-align: center">
-        <button type = "button" id="addContact" class="buttons" onclick="addContact();"> Add Contact </button>
-    </div>
-        
 </body>
 
 <script>
-    document.getElementById('search').addEventListener("keypress", function(e){
-	if(e.key == "Enter"){
-		search(document.getElementById('search').value)
-	}
-});
+    document.getElementById('search').addEventListener("keypress", function (e) {
+        if (e.key == "Enter") {
+            search(document.getElementById('search').value)
+        }
+    });
 </script>
+
 </html>

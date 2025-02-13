@@ -77,8 +77,13 @@
     color: #FFFFFF;
 }
 
+#signout {
+    background-color: lightgrey;
+}
+
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="search"] {
     font-size: 28px;
     border-radius: 5px;
     border: 1.5px solid rgba(0, 100, 255, 0.3);
@@ -129,6 +134,10 @@ th {
     color: white;
     font-size: 1.875em;
     height: 75px;
+}
+
+#inner-body {
+    background-color:rgb(46, 46, 46);
 }
 
 .removeButton {
