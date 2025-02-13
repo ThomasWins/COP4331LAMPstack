@@ -10,9 +10,11 @@
 <body id="contactsBody" onload="checkQueries()">
 
     <h2>Contacts List</h2>
-    <div class="input-group">
-        <input type ="search" placeholder="Search Contacts">
+    <div id="input-group">
+        <input type ="search" id="search" placeholder="Search Contacts">
+        <button type = "button" id="search-all" class="buttons" onclick="search('%');">Search All</button>
     </div>
+    <span id="searchError"></span> 
     <table id="table">
         <thead>
             <tr>

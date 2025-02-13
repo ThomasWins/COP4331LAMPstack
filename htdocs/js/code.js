@@ -128,7 +128,7 @@ function countContacts(search){
 					return;
 				}
 	
-				console.log(jsonObject);
+				return(jsonObject.count);
 			}
 		};
 		xhr.send(jsonPayload);
@@ -140,9 +140,20 @@ function countContacts(search){
 }
 
 function searchContacts(search, page){
+	let count = countContacts(search);
+	if (count==0){
+		document.getElementById("searchError").innerHTML = "There don't seem to be any search results matching that criteria"
+	}
+	else if(count<(page-1)*10){
+		window.location.href="contactsPage.html?search=" + search + "&page=" + Math.ceil(count/10);
+	}
+	if(page>1)
+		document.getElementById("page-back").style.visibility = "visible";
+	if(count>(page)*10)
+		document.getElementById("page-for").style.visibility = "visible";
 	let tmp = {search:search, userId:userId,page:page};
 	let jsonPayload = JSON.stringify(tmp);
-	let count = countContacts(search);
+	
 	let url = urlBase + '/SearchContact.' + extension;
 
 	let xhr = new XMLHttpRequest();
@@ -228,8 +239,18 @@ function checkQueries(){
 	}
 }
 
+function search(search, page=1){
+	window.location.href="contactsPage.html?search=" + search + "&page=" + page;
+}
+
 function signOut()
 {
 	document.cookie = "userId=-1 ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 	window.location.href = "index.html";
+}
+
+document.getElementById('search').onkeydown = function(e){
+	if(e.code == "Enter"){
+		search(document.getElementById('search').value)
+	}
 }

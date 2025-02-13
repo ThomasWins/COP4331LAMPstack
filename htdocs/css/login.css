@@ -7,7 +7,7 @@
 }
 
 #contactsBody {
-    background-color: lightgray;
+    background-color: darkgray;
 }
 
 #title {
@@ -43,13 +43,19 @@
     opacity: 60%;
 }
 
-#page-row{
+#pageRow{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 #page-back, #page-for{
     visibility: hidden;
+}
+
+#input-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .buttons {
