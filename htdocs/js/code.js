@@ -236,12 +236,10 @@ function editContact(id, name, email, phone) {
 	const closePopupButton2 = document.getElementById('closePopup2');
 
 	// Open the popup
-	openPopupButton2.addEventListener('click', () => {
-		popup2.style.display = 'flex';
-		document.getElementById('ContactName2').value = name;
-		document.getElementById('ContactEmail2').value = email;
-		document.getElementById('ContactPhone2').value = phone;
-	});
+	document.getElementById('ContactName2').value = name;
+	document.getElementById('ContactEmail2').value = email;
+	document.getElementById('ContactPhone2').value = phone;
+	popup2.style.display = 'flex';
 
 	// Close the popup
 	closePopupButton2.addEventListener('click', () => {
