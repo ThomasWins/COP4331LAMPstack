@@ -186,6 +186,7 @@ function searchContacts(search, page){
 function buildTable(data){
 	const table = document.getElementById('table');
 	table.style.visibility = 'visible';
+	table.style.minHeight = 'null';
 	const tbody = document.getElementById('contactsTableBody');
 	for (const index in data.results){
 		row = data.results[index];
