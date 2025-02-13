@@ -21,7 +21,7 @@
 		
 		while($row = $result->fetch_assoc())
 		{
-			$searchCount = $row["Expr1000"];
+			$searchCount = $row["COUNT(*)"];
 		}
 		
 		returnWithInfo( $searchCount);
