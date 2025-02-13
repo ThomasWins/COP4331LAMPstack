@@ -111,9 +111,36 @@ function createAccount()
 function searchContacts(search, page){
 	let tmp = {search:search, userId:userId,page:page};
 	let jsonPayload = JSON.stringify(tmp);
-	let url = urlBase + '/SearchContact.' + extension;
-
+	let url = urlBase + '/CountContacts.' + extension;
 	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				let jsonObject = JSON.parse( xhr.responseText );
+				
+				if(jsonObject.error!=""){
+					console.log(err);
+					return;
+				}
+	
+				console.log(jsonObject);
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		console.log(err);
+	}
+
+	url = urlBase + '/SearchContact.' + extension;
+
+	xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 	try
