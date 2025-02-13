@@ -124,7 +124,7 @@ function searchContacts(search, page){
 			{
 				let jsonObject = JSON.parse( xhr.responseText );
 				
-				if(err!=""){
+				if(jsonObject.error!=""){
 					console.log(err);
 					return;
 				}
