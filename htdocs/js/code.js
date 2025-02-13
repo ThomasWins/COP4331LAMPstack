@@ -192,8 +192,8 @@ function buildTable(data){
 		row = data.results[index];
 		var newRow = tbody.insertRow();
 		newRow.innerHTML = '<td>'+row.Name+ '</td><td>' + row.Email + '</td><td>+'
-		+row.Phone+'</td><td><button type="button" class="settings" onclick="removeContact('+row.ID+
-		');">Remove</button><button type="button" class="editContact" id="openPopup2" onclick="editContact('+row.ID+');">Edit</button></td>'
+		+row.Phone+'</td><td><button type="button" class="removeButton" onclick="removeContact('+row.ID+
+		');">Remove</button><button type="button" class="updateButton" id="openPopup2" onclick="editContact('+row.ID+');">Edit</button></td>'
 	}
 }
 function saveCookie()
