@@ -117,6 +117,7 @@ table {
 h1 {
     text-align: center;
     color: white;
+    font-size: 3em;
 }
 
 th,
@@ -140,10 +141,16 @@ th {
 }
 
 #inner-body {
-    background-color:rgb(46, 46, 46);
+    background-color:rgb(75, 75, 75);
     padding-top: 10px;
     padding-bottom: 50px;
     min-height: 60%;
+}
+
+#addContactDiv {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
 }
 
 .removeButton {
