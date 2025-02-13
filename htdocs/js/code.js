@@ -145,7 +145,7 @@ function buildTable(data){
 	table.style.visibility = 'visible';
 	const tbody = document.getElementById('contactsTableBody');
 	console.log(data);
-	for (const row in data){
+	for (const row in data.results){
 		console.log(row);
 		var newRow = tbody.insertRow();
 		newRow.innerHTML = '<td>'+row.Name+ '</td><td>' + row.Email + '</td><td>+'
