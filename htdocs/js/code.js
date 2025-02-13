@@ -142,7 +142,7 @@ function countContacts(search){
 function searchContacts(search, page){
 	let tmp = {search:search, userId:userId,page:page};
 	let jsonPayload = JSON.stringify(tmp);
-
+	let count = countContacts(search);
 	let url = urlBase + '/SearchContact.' + extension;
 
 	let xhr = new XMLHttpRequest();
