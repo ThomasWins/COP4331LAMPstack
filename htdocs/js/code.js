@@ -141,7 +141,15 @@ function searchContacts(search, page){
 }
 
 function buildTable(data){
-	console.log(data);
+	const table = document.getElementById('table');
+	table.style.visibility = 'visible';
+	const tbody = document.getElementById('contactsTableBody');
+	for (const row in data){
+		var newRow = tbody.insertRow();
+		newRow.innerHTML = '<td>'+row.Name+ '</td><td>' + row.Email + '</td><td>+'
+		+row.Phone+'</td><td><button type="button" class="settings" onclick="removeContact('+row.ID+
+		');">Remove</button><button type="button" class="editContact" onclick="editContact('+row.ID+');">Edit</button></td>'
+	}
 }
 function saveCookie()
 {
