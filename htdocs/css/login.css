@@ -145,6 +145,7 @@ th {
     padding-top: 10px;
     padding-bottom: 50px;
     min-height: 60%;
+    position: static;
 }
 
 #addContactDiv {
