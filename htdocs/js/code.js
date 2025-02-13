@@ -108,8 +108,8 @@ function createAccount()
 
 }
 
-function searchContacts(search, page){
-	let tmp = {search:search, userId:userId,page:page};
+function countContacts(search){
+	let tmp = {search:search, userId:userId};
 	let jsonPayload = JSON.stringify(tmp);
 	let url = urlBase + '/CountContacts.' + extension;
 	let xhr = new XMLHttpRequest();
@@ -137,10 +137,15 @@ function searchContacts(search, page){
 	{
 		console.log(err);
 	}
+}
 
-	url = urlBase + '/SearchContact.' + extension;
+function searchContacts(search, page){
+	let tmp = {search:search, userId:userId,page:page};
+	let jsonPayload = JSON.stringify(tmp);
 
-	xhr = new XMLHttpRequest();
+	let url = urlBase + '/SearchContact.' + extension;
+
+	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 	try
@@ -171,7 +176,6 @@ function buildTable(data){
 	const table = document.getElementById('table');
 	table.style.visibility = 'visible';
 	const tbody = document.getElementById('contactsTableBody');
-	console.log(data);
 	for (const index in data.results){
 		row = data.results[index];
 		var newRow = tbody.insertRow();
