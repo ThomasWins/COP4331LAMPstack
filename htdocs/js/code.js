@@ -178,7 +178,7 @@ function buildTable(data) {
 			'<td>+' + row.Phone + '</td>' +
 			'<td>' +
 			'<button type="button" class="settings" onclick="removeContact(' + row.ID + ');">Remove</button>' +
-			'<button type="button" class="editContact" id="openPopup2" ' +
+			'<button type="button" class="editContact"  ' +
 			'onclick="editContact(' + row.ID + ', \'' + row.Name + '\', \'' + row.Email + '\', \'' + row.Phone + '\');">Edit</button>' +
 			'</td>';
 
