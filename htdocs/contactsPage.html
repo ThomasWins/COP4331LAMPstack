@@ -7,7 +7,7 @@
     <link href="css/login.css" rel="stylesheet">
 </head>
 
-<body onload="checkQueries()">
+<body id="contactsBody" onload="checkQueries()">
 
     <h2>Contacts List</h2>
     <div class="input-group">
@@ -33,11 +33,15 @@
             </tr>
         </tbody>
     </table>
-    <body>
-        <button type = "button" id="addContact" class="buttons" onclick="addContact();"> Add Contact </button>
+    <div>
         <button type = "button" id="Page Forward" class="buttons" onclick="pageBack();"> Previous Page</button>
         <button type = "button" id="Page Forward" class="buttons" onclick="pageForward();"> Next Page</button>
-    </body>
+    </div>
+    <div style="text-align: center">
+        <button type = "button" id="addContact" class="buttons" onclick="addContact();"> Add Contact </button>
+    </div>
+        
+</body>
 
 
 </html>

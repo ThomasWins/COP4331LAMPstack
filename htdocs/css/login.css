@@ -1,9 +1,13 @@
-body {
+#loginBody {
     background-image: url("ucfimage.avif");
     background-position: center;
     background-repeat: no-repeat;
     background-color: black;
     background-size: 100%;
+}
+
+#contactsBody {
+    background-color: lightgray;
 }
 
 #title {

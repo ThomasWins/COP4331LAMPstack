@@ -109,9 +109,40 @@ function createAccount()
 }
 
 function searchContacts(search, page){
-	console.log(userId);
+	let tmp = {search:search, userId:userId,page:page};
+	let jsonPayload = JSON.stringify(tmp);
+	let url = urlBase + '/SearchContact.' + extension;
+
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				let jsonObject = JSON.parse( xhr.responseText );
+				
+				if(err!=""){
+					console.log(err);
+					return;
+				}
+	
+				buildTable(jsonObject);
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		console.log(err);
+	}
 }
 
+function buildTable(data){
+	console.log(data);
+}
 function saveCookie()
 {
 	let minutes = 20;
@@ -149,7 +180,6 @@ function checkQueries(){
 	const urlParams = new URLSearchParams(window.location.search);
 	const page = urlParams.get('page');
 	const search = urlParams.get('search');
-	console.log(userId);
 	if(search != null){
 		if (page == null)
 			page = 1;
