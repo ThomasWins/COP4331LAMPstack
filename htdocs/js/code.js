@@ -230,7 +230,7 @@ function signOut() {
 	document.cookie = "userId=-1 ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 	window.location.href = "index.html";
 }
-function editContact(id, name, email, phone,buttonID) {
+function editContact(id, name, email, phone) {
 	const popup2 = document.getElementById('popup2');
 	const openPopupButton2 = document.getElementById('edit_' + id);
 	const closePopupButton2 = document.getElementById('closePopup2');
