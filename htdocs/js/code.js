@@ -108,6 +108,10 @@ function createAccount()
 
 }
 
+function searchContacts(search, page){
+	console.log(userId);
+}
+
 function saveCookie()
 {
 	let minutes = 20;
@@ -121,7 +125,6 @@ function readCookie()
 	userId = -1;
 	date = "Thu, 01 Jan 1970 00:00:00 GMT";
 	let data = document.cookie;
-	console.log(data);
 	let splits = data.split(",");
 	for(var i = 0; i < splits.length; i++) 
 	{
@@ -136,15 +139,20 @@ function readCookie()
 		}
 	}
 	current = new Date();
-	console.log(data<current);
-	console.log(userId + " " + date);
 	if( userId < 0 || (date<current))
 	{
 		window.location.href = "index.html";
 	}
-	else
-	{
-//		document.getElementById("userName").innerHTML = "Logged in as " + firstName + " " + lastName;
+}
+
+function checkQueries(){
+	const urlParams = new URLSearchParams(window.location.search);
+	const page = urlParams.get('page');
+	const search = urlParams.get('search');
+	if(search != null){
+		if (page == null)
+			page = 1;
+		searchContacts(search, page);
 	}
 }
 
