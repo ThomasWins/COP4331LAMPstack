@@ -146,7 +146,7 @@ function buildTable(data){
 	const tbody = document.getElementById('contactsTableBody');
 	console.log(data);
 	for (const row in data.results){
-		console.log(row);
+		console.log(data.results[row]);
 		var newRow = tbody.insertRow();
 		newRow.innerHTML = '<td>'+row.Name+ '</td><td>' + row.Email + '</td><td>+'
 		+row.Phone+'</td><td><button type="button" class="settings" onclick="removeContact('+row.ID+
