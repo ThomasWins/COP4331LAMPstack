@@ -178,7 +178,7 @@ function readCookie()
 
 function checkQueries(){
 	const urlParams = new URLSearchParams(window.location.search);
-	const page = urlParams.get('page');
+	let page = urlParams.get('page');
 	const search = urlParams.get('search');
 	if(search != null){
 		if (page == null)
