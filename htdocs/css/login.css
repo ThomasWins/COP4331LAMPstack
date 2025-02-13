@@ -53,6 +53,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .buttons {
@@ -74,6 +75,9 @@
     color: #FFFFFF;
 }
 
+#search-all {
+    margin-bottom: 0px;
+}
 
 input[type="text"],
 input[type="password"]{
@@ -117,6 +121,7 @@ table {
 h1 {
     text-align: center;
     color: white;
+    font-size: 3em;
 }
 
 th,
@@ -140,10 +145,18 @@ th {
 }
 
 #inner-body {
-    background-color:rgb(46, 46, 46);
+    background-color:rgb(75, 75, 75);
     padding-top: 10px;
     padding-bottom: 50px;
     min-height: 60%;
+    position: relative;
+}
+
+#addContactDiv {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
 }
 
 .removeButton {
@@ -152,6 +165,7 @@ th {
     border-radius: 2px;
     color:#FFFFFF;
     width:25%;
+    margin-right: 25%;
     transition: all ease-in-out .2s;
 }
 
@@ -165,7 +179,7 @@ th {
     border-width: 1.2px;
     border-radius: 2px;
     color: #FFFFFF;
-    width: 75%;
+    width: 50%;
     transition: all ease-in-out .2s;
 }
 
