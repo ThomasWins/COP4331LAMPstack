@@ -177,10 +177,9 @@ function buildTable(data) {
 			'<td>' + row.Email + '</td>' +
 			'<td>+' + row.Phone + '</td>' +
 			'<td>' +
-			'<button type="button" class="settings" onclick="removeContact(' + row.ID + ');">Remove</button>' +
-			'<button type="button" class="editContact"  ' +
-			'onclick="editContact(' + row.ID + ', \'' + row.Name + '\', \'' + row.Email + '\', \'' + row.Phone + '\');">Edit</button>' +
-			'</td>';
+			'<button type="button" id="remove_' + row.ID + '" class="settings" onclick="removeContact(' + row.ID + ');">Remove</button>' +
+			'<button type="button" id="edit_' + row.ID + '" class="editContact" onclick="editContact(' + row.ID + ', \'' + row.Name + '\', \'' + row.Email + '\', \'' + row.Phone + '\');">Edit</button>' +
+		'</td>';
 
 	}
 }
@@ -231,9 +230,9 @@ function signOut() {
 	document.cookie = "userId=-1 ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 	window.location.href = "index.html";
 }
-function editContact(id, name, email, phone) {
+function editContact(id, name, email, phone,buttonID) {
 	const popup2 = document.getElementById('popup2');
-	const openPopupButton2 = document.getElementById('openPopup2');
+	const openPopupButton2 = document.getElementById('edit_' + id);
 	const closePopupButton2 = document.getElementById('closePopup2');
 
 	// Open the popup
