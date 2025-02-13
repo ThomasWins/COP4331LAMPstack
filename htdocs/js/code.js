@@ -192,8 +192,8 @@ function buildTable(data){
 		row = data.results[index];
 		var newRow = tbody.insertRow();
 		newRow.innerHTML = '<td>'+row.Name+ '</td><td>' + row.Email + '</td><td>+'
-		+row.Phone+'</td><td><button type="button" class="removeButton" onclick="removeContact('+row.ID+
-		');">Remove</button><button type="button" class="updateButton" id="openPopup2" onclick="editContact('+row.ID+');">Edit</button></td>'
+		+row.Phone+'</td><td><button type="button" class="settings" onclick="removeContact('+row.ID+
+		');">Remove</button><button type="button" class="editContact" id="openPopup2" onclick="editContact('+row.ID+'+ ',' +row.Name+',' +row.Email+ ',' +row.Phone);">Edit</button></td>'
 	}
 }
 function saveCookie()
@@ -248,5 +248,30 @@ function signOut()
 {
 	document.cookie = "userId=-1 ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 	window.location.href = "index.html";
+}
+function editContact(contactID){
+    const popup2 = document.getElementById('popup2');
+    const openPopupButton2 = document.getElementById('openPopup2');
+    const closePopupButton2 = document.getElementById('closePopup2');
+
+    // Open the popup
+    openPopupButton2.addEventListener('click', () => {
+		popup2.style.display = 'flex';
+		document.getElementById('ContactName2').value = Name;
+		document.getElementById('ContactEmail2').value = email;
+		document.getElementById('ContactPhone2').value = phone;
+    });
+
+    // Close the popup
+    closePopupButton2.addEventListener('click', () => {
+      popup2.style.display = 'none';
+    });
+
+    // Close the popup when clicking outside the content
+    popup2.addEventListener('click', (e) => {
+      if (e.target === popup2) {
+        popup2.style.display = 'none';
+      }
+    });
 }
 
