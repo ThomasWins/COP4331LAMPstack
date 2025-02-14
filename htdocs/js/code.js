@@ -333,7 +333,7 @@ function checkQueries() {
 }
 
 function search(search, page = 1) {
-	window.location.href = "//contactsPage.html?search=" + search + "&page=" + page;
+	window.location.href = "proctest.christopherjparret/contactsPage.html?search=" + search + "&page=" + page;
 }
 
 function signOut() {
