@@ -283,3 +283,10 @@ th {
     text-align: center;
 }
 
+#searchError {
+    color:#ff3e3e;
+    font-size: 20px;
+    margin:auto;
+    border-radius:10px;
+    padding:3px
+}
