@@ -173,18 +173,18 @@ function pageForward(){
 	let page = urlParams.get('page');
 	if (page == null)
 		page = 1;
-	const search = urlParams.get('search');
+	const query = urlParams.get('search');
 	if (search != null) {
-		search(search, page+1);
+		search(query, page+1);
 	}
 }
 
 function pageBack(){
 	const urlParams = new URLSearchParams(window.location.search);
 	let page = urlParams.get('page');
-	const search = urlParams.get('search');
+	const query = urlParams.get('search');
 	if (search != null) {
-		search(search, page-1);
+		search(query, page-1);
 	}
 }
 
