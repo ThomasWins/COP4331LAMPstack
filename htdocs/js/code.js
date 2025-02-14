@@ -154,6 +154,7 @@ function searchContacts(search, page) {
 }
 
 function setArrows(count){
+	console.log(count);
 	if (count == 0) {
 		document.getElementById("searchError").innerHTML = "There don't seem to be any search results matching that criteria"
 	}
