@@ -125,6 +125,7 @@ function countContacts(search) {
 }
 
 function searchContacts(search, page) {
+	countContacts();
 	let tmp = { search: search, userId: userId, page: page };
 	let jsonPayload = JSON.stringify(tmp);
 
