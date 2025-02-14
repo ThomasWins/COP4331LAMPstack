@@ -113,7 +113,6 @@ function countContacts(search, page) {
 					console.log(jsonObject.error);
 					return;
 				}
-				console.log(jsonObject.count);
 				setArrows(jsonObject.count, page);
 			}
 		};
@@ -155,7 +154,6 @@ function searchContacts(search, page) {
 }
 
 function setArrows(count, page){
-	console.log(count);
 	if (count == 0) {
 		document.getElementById("searchError").innerHTML = "There don't seem to be any search results matching that criteria"
 	}
@@ -175,7 +173,8 @@ function pageForward(){
 		page = 1;
 	const query = urlParams.get('search');
 	if (search != null) {
-		search(query, page+1);
+		console.log(query);
+		//search(query, page+1);
 	}
 }
 
@@ -225,7 +224,6 @@ function updateContact(){
 	let id = document.getElementById('EditContact').dataset.id;
 	let tmp = {id: id, name: name, phone: phone, email: email};
 	let jsonPayload = JSON.stringify(tmp);
-	console.log(jsonPayload);
 	let url = urlBase + '/UpdateContact.' + extension;
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
