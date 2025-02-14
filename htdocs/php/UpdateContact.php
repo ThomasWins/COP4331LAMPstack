@@ -21,7 +21,7 @@
 
         if($row = $result->fetch_assoc())
         {
-            $stmt = $conn->prepare("UPDATE contacts SET (Email,Phone,Name) VALUES(?,?,?) WHERE ID=?");
+            $stmt = $conn->prepare("UPDATE contacts SET Email=?, Phone=? , Name=? WHERE ID=?");
             $stmt->bind_param("sssi", $email, $phone, $name, $id);
             $stmt->execute();
             returnWithConfirm();

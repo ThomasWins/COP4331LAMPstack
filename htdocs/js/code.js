@@ -264,7 +264,7 @@ function buildTable(data) {
 		newRow.innerHTML =
 			'<td>' + row.Name + '</td>' +
 			'<td>' + row.Email + '</td>' +
-			'<td>+' + row.Phone + '</td>' +
+			'<td>' + row.Phone + '</td>' +
 			'<td>' +
 			'<button type="button" id="remove_' + row.ID + '" class="settings" onclick="removeContact(' + row.ID + ');">Remove</button>' +
 			'<button type="button" id="edit_' + row.ID + '" class="editContact" onclick="editContact(' + row.ID + ', \'' + row.Name + '\', \'' + row.Email + '\', \'' + row.Phone + '\');">Edit</button>' +
