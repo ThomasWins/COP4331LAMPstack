@@ -155,6 +155,7 @@ h1 {
     text-align: center;
     color: white;
     font-size: 3em;
+    margin-top: 10px;
 }
 
 th,
@@ -178,8 +179,7 @@ th {
 }
 
 #inner-body {
-    background-color: rgba(75, 75, 75, 0.8);
-    padding-top: 10px;
+    background-color: rgba(75, 75, 75, 0.9);
     padding-bottom: 50px;
     min-height: 60%;
     position: relative;
