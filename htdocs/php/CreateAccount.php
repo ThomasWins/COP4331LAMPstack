@@ -52,7 +52,7 @@
 	
 	function returnWithInfo($id)
 	{
-		$retValue = '{"id":"' . $id . '","error":""}';
+		$retValue = '{"message": "account created successfully","error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
