@@ -173,7 +173,7 @@ function pageForward(){
 		page = 1;
 	const query = urlParams.get('search');
 	if (search != null) {
-		search(query, page.parseInt+1);
+		search(query, page+1);
 	}
 }
 
