@@ -113,9 +113,7 @@ function countContacts(search) {
 					console.log(jsonObject.error);
 					return;
 				}
-				console.log(jsonObject);
-				console.log(jsonObject.count);
-				return (jsonObject.count);
+				return jsonObject.count;
 			}
 		};
 		xhr.send(jsonPayload);
