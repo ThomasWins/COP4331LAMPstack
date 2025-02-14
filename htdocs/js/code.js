@@ -113,7 +113,6 @@ function countContacts(search) {
 					console.log(jsonObject.error);
 					return;
 				}
-				console.log(jsonObject);
 				return (jsonObject.count);
 			}
 		};
@@ -126,6 +125,7 @@ function countContacts(search) {
 
 function searchContacts(search, page) {
 	let count = countContacts(search);
+	console.log(count);
 	if (count == 0) {
 		document.getElementById("searchError").innerHTML = "There don't seem to be any search results matching that criteria"
 	}
