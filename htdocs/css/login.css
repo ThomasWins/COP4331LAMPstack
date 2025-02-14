@@ -275,5 +275,8 @@ th {
     justify-content: center;
     margin-left: 5%;
     text-align: center;
+    margin: 0 auto; /* Centers the table */
+    display: flex;
+
 }
 
