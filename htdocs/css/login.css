@@ -144,7 +144,7 @@ input[type="search"]{
 /* Contacts Page */
 
 table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     visibility: hidden;
     min-height: 30%;
@@ -190,6 +190,7 @@ th {
     bottom: 50px;
     text-align: center;
     width: 100%;
+    margin-top: 20px;
 }
 
 .removeButton {
