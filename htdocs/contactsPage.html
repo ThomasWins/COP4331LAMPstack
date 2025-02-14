@@ -12,7 +12,7 @@
         <h2>Add Contact</h2>
         <input type="text" id="ContactName" placeholder="Name" /><br />
         <input type="email" id="ContactEmail" placeholder="Email" /><br />
-        <input type="tel" id="ContactPhone" placeholder="Phone" /><br />
+        <input type="tel" id="ContactPhone pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" /><br />
         <button  id="SaveContactAdd" onclick="addContact();">Add</button>
         <button class="close-btn" id="closePopup1">Close</button>
         </div>
@@ -22,7 +22,7 @@
         <h2>Edit Contact</h2>
         <input type="text" id="ContactName2" placeholder="Name" /><br />
         <input type="email" id="ContactEmail2" placeholder="Email" /><br />
-        <input type="tel" id="ContactPhone2" placeholder="Phone" /><br />
+        <input type="tel" id="ContactPhone2 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" /><br />
         <button  id="EditContact" onclick="updateContact();">Edit</button>
         <button class="close-btn" id="closePopup2">Close</button>
         </div>

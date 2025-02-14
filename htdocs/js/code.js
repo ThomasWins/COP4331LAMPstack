@@ -280,7 +280,8 @@ function buildTable(data) {
 	table.style.minHeight = 'max-content';
 	const tbody = document.getElementById('contactsTableBody');
 	for (const index in data.results) {
-		row = data.results[index];
+		let row = data.results[index];
+		let phone = row.Phone
 		var newRow = tbody.insertRow();
 		newRow.innerHTML =
 			'<td>' + row.Name + '</td>' +
