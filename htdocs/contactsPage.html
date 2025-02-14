@@ -8,24 +8,24 @@
 
 <body id="contactsBody" onload="checkQueries()">
     <div class="popup-container" id="popup1">
-        <div class="popup-content">
+        <form class="popup-content" action="javascript:addContact()">
         <h2>Add Contact</h2>
         <input type="text" id="ContactName" placeholder="Name" /><br />
         <input type="email" id="ContactEmail" placeholder="Email" /><br />
         <input type="tel" id="ContactPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" /><br />
-        <button  id="SaveContactAdd" onclick="addContact();">Add</button>
+        <button  id="SaveContactAdd" type="submit">Add</button>
         <button class="close-btn" id="closePopup1">Close</button>
-        </div>
+        </form>
     </div>
     <div class="popup-container" id="popup2">
-        <div class="popup-content">
+        <form class="popup-content" action="javascript:updateContact()">
         <h2>Edit Contact</h2>
         <input type="text" id="ContactName2" placeholder="Name" /><br />
         <input type="email" id="ContactEmail2" placeholder="Email" /><br />
         <input type="tel" id="ContactPhone2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" /><br />
-        <button  id="EditContact" onclick="updateContact();">Edit</button>
+        <button  id="EditContact" type="submit">Edit</button>
         <button class="close-btn" id="closePopup2">Close</button>
-        </div>
+        </form>
     </div>
     <button type="button" id="signout" class="signOut" onclick="signOut();"> Sign Out </button>
     <div id="inner-body">
