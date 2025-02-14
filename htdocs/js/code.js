@@ -114,6 +114,7 @@ function countContacts(search) {
 					return;
 				}
 				console.log(jsonObject);
+				console.log(jsonObject.count);
 				return (jsonObject.count);
 			}
 		};
