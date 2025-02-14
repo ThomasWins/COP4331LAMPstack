@@ -173,8 +173,7 @@ function pageForward(){
 		page = 1;
 	const query = urlParams.get('search');
 	if (search != null) {
-		console.log(page);
-		//search(query, page+1);
+		search(query, page+1);
 	}
 }
 
@@ -334,7 +333,7 @@ function checkQueries() {
 }
 
 function search(search, page = 1) {
-	window.location.href = "contactsPage.html?search=" + search + "&page=" + page;
+	window.location.href = "//contactsPage.html?search=" + search + "&page=" + page;
 }
 
 function signOut() {
