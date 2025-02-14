@@ -273,5 +273,6 @@ th {
     border-radius: 25px;
     border: 1px solid black;
     overflow: hidden; /* Ensures proper rounding */
+    text-align: center;
 }
 
