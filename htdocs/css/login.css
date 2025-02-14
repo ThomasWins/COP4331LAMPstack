@@ -178,8 +178,7 @@ th {
 }
 
 #inner-body {
-    background-color:rgb(75, 75, 75);
-    opacity: 0.8;
+    background: rgba(75, 75, 75, 0,8);
     padding-top: 10px;
     padding-bottom: 50px;
     min-height: 60%;
