@@ -147,7 +147,7 @@ input[type="search"]{
 /* Contacts Page */
 
 table {
-    width: 90%;
+    width: 100%;
     /* border-collapse: collapse; */
     overflow: hidden;
     visibility: hidden;
@@ -269,9 +269,9 @@ th {
     font-size: 20pt;
   }
   .tableWrapper {
+    width: 90%;
     border-radius: 25px;
     border: 1px solid black;
     overflow: hidden; /* Ensures proper rounding */
-    display: inline-block; /* Makes sure it's the right size */
 }
 
