@@ -102,7 +102,6 @@ function countContacts(search) {
 	let jsonPayload = JSON.stringify(tmp);
 	let url = urlBase + '/CountContacts.' + extension;
 	let xhr = new XMLHttpRequest();
-	let count = 0;
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 	try {
@@ -114,6 +113,7 @@ function countContacts(search) {
 					console.log(jsonObject.error);
 					return;
 				}
+				console.log(jsonObject.count);
 				setArrows(jsonObject.count);
 			}
 		};
