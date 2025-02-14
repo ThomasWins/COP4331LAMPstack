@@ -268,9 +268,10 @@ th {
   .CreateButton{
     font-size: 20pt;
   }
-  .cringe{
+  .tableWrapper {
     border-radius: 25px;
-    border:1px solid black;
-  }
-
+    border: 1px solid black;
+    overflow: hidden; /* Ensures proper rounding */
+    display: inline-block; /* Makes sure it's the right size */
+}
 
