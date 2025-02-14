@@ -148,8 +148,6 @@ input[type="search"]{
 
 table {
     width: 90%;
-    border-radius: 25px;
-    border:1px black;
     border-collapse: collapse;
     visibility: hidden;
     min-height: 30%;
@@ -268,6 +266,10 @@ th {
   }
   .CreateButton{
     font-size: 20pt;
+  }
+  .cringe{
+    border-radius: 25px;
+    border:1px solid black;
   }
 
 
