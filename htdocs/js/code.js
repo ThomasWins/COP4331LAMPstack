@@ -113,7 +113,7 @@ function countContacts(search) {
 					console.log(jsonObject.error);
 					return;
 				}
-				return (jsonObject.count);
+				return (jsonObject["count"]);
 			}
 		};
 		xhr.send(jsonPayload);
