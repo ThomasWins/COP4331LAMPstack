@@ -179,7 +179,7 @@ function pageForward(){
 
 function pageBack(){
 	const urlParams = new URLSearchParams(window.location.search);
-	let page = urlParams.get('page');
+	let page = parseInt(urlParams.get('page'));
 	const query = urlParams.get('search');
 	if (search != null) {
 		search(query, page-1);
