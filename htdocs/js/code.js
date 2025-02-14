@@ -170,18 +170,18 @@ function setArrows(count, page){
 
 function pageForward(){
 	const urlParams = new URLSearchParams(window.location.search);
-	let page = urlParams.get('page')+1;
+	let page = urlParams.get('page');
+	if (page == null)
+		page = 1;
 	const search = urlParams.get('search');
 	if (search != null) {
-		if (page == null)
-			page = 1
 		searchContacts(search, page+1);
 	}
 }
 
 function pageBack(){
 	const urlParams = new URLSearchParams(window.location.search);
-	let page = urlParams.get('page')+1;
+	let page = urlParams.get('page');
 	const search = urlParams.get('search');
 	if (search != null) {
 		searchContacts(search, page-1);
