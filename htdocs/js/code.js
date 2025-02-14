@@ -122,7 +122,9 @@ function countContacts(search) {
 	catch (err) {
 		console.log(err);
 	}
-	return count;
+	finally{
+		return count;
+	}
 }
 
 function searchContacts(search, page) {
