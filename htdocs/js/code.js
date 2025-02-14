@@ -97,7 +97,7 @@ function createAccount() {
 
 }
 
-function countContacts(search) {
+function countContacts(search, page) {
 	let tmp = { search: search, userId: userId };
 	let jsonPayload = JSON.stringify(tmp);
 	let url = urlBase + '/CountContacts.' + extension;
@@ -114,7 +114,7 @@ function countContacts(search) {
 					return;
 				}
 				console.log(jsonObject.count);
-				setArrows(jsonObject.count);
+				setArrows(jsonObject.count, page);
 			}
 		};
 		xhr.send(jsonPayload);
@@ -125,7 +125,7 @@ function countContacts(search) {
 }
 
 function searchContacts(search, page) {
-	countContacts();
+	countContacts(search, page);
 	let tmp = { search: search, userId: userId, page: page };
 	let jsonPayload = JSON.stringify(tmp);
 
@@ -154,7 +154,7 @@ function searchContacts(search, page) {
 	}
 }
 
-function setArrows(count){
+function setArrows(count, page){
 	console.log(count);
 	if (count == 0) {
 		document.getElementById("searchError").innerHTML = "There don't seem to be any search results matching that criteria"
