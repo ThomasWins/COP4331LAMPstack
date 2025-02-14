@@ -148,6 +148,7 @@ table {
     border-collapse: collapse;
     visibility: hidden;
     min-height: 30%;
+    margin-left: 5%;
     text-align: center;
 }
 
