@@ -148,6 +148,7 @@ input[type="search"]{
 
 table {
     width: 90%;
+    border-radius: 25px;
     border-collapse: collapse;
     visibility: hidden;
     min-height: 30%;
