@@ -175,7 +175,7 @@ function pageForward(){
 		page = 1;
 	const search = urlParams.get('search');
 	if (search != null) {
-		searchContacts(search, page+1);
+		search(search, page+1);
 	}
 }
 
@@ -184,7 +184,7 @@ function pageBack(){
 	let page = urlParams.get('page');
 	const search = urlParams.get('search');
 	if (search != null) {
-		searchContacts(search, page-1);
+		search(search, page-1);
 	}
 }
 
