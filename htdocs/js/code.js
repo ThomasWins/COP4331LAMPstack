@@ -110,7 +110,7 @@ function countContacts(search) {
 				let jsonObject = JSON.parse(xhr.responseText);
 
 				if (jsonObject.error != "") {
-					console.log(err);
+					console.log(jsonObject.error);
 					return;
 				}
 
@@ -150,7 +150,7 @@ function searchContacts(search, page) {
 				let jsonObject = JSON.parse(xhr.responseText);
 
 				if (jsonObject.error != "") {
-					console.log(err);
+					console.log(jsonObject.error);
 					return;
 				}
 
@@ -180,7 +180,7 @@ function addContact(){
 				let jsonObject = JSON.parse(xhr.responseText);
 
 				if (jsonObject.error != "") {
-					console.log(err);
+					console.log(jsonObject.error);
 					return;
 				}
 
@@ -199,7 +199,7 @@ function updateContact(){
 	let email = document.getElementById('ContactEmail2').value;
 	let phone = document.getElementById('ContactPhone2').value;
 	let id = document.getElementById('EditContact').dataset.id;
-	let tmp = {id: id, name: name, phone: phone, email: email};
+	let tmp = {Id: id, name: name, phone: phone, email: email};
 	let jsonPayload = JSON.stringify(tmp);
 	let url = urlBase + '/UpdateContact.' + extension;
 	let xhr = new XMLHttpRequest();
@@ -211,7 +211,7 @@ function updateContact(){
 				let jsonObject = JSON.parse(xhr.responseText);
 
 				if (jsonObject.error != "") {
-					console.log(err);
+					console.log(jsonObject.error);
 					return;
 				}
 
@@ -228,7 +228,7 @@ function updateContact(){
 function removeContact(id){
 	let tmp = {id: id};
 	let jsonPayload = JSON.stringify(tmp);
-	let url = urlBase + '/DeleteeContact.' + extension;
+	let url = urlBase + '/DeleteContact.' + extension;
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
@@ -238,7 +238,7 @@ function removeContact(id){
 				let jsonObject = JSON.parse(xhr.responseText);
 
 				if (jsonObject.error != "") {
-					console.log(err);
+					console.log(jsonObject.error);
 					return;
 				}
 
