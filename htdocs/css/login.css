@@ -147,11 +147,11 @@ input[type="search"]{
 /* Contacts Page */
 
 table {
-    width: 90%;
-    border-collapse: collapse;
+    width: 100%;
+    /* border-collapse: collapse; */
+    overflow: hidden;
     visibility: hidden;
     min-height: 30%;
-    margin-left: 5%;
     text-align: center;
 }
 
@@ -267,5 +267,13 @@ th {
   .CreateButton{
     font-size: 20pt;
   }
-
+  .tableWrapper {
+    width: 90%;
+    border-radius: 25px;
+    border: 1px solid black;
+    overflow: hidden; /* Ensures proper rounding */
+    justify-content: center;
+    margin-left: 5%;
+    text-align: center;
+}
 
