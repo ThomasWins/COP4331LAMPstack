@@ -23,7 +23,7 @@
         <input type="text" id="ContactName2" placeholder="Name" /><br />
         <input type="text" id="ContactEmail2" placeholder="Email" /><br />
         <input type="text" id="ContactPhone2" placeholder="Phone" /><br />
-        <button  id="SaveContactAdd" onclick="updateContact();">Add</button>
+        <button  id="EditContact" onclick="updateContact();">Edit</button>
         <button class="close-btn" id="closePopup2">Close</button>
         </div>
     </div>
@@ -78,32 +78,15 @@
     // Close the popup
     closePopupButton.addEventListener('click', () => {
       popup.style.display = 'none';
+      document.getElementById('ContactName').value = "";
+		  document.getElementById('ContactEmail').value = "";
+		  document.getElementById('ContactPhone').value = "";
     });
 
     // Close the popup when clicking outside the content
     popup.addEventListener('click', (e) => {
       if (e.target === popup) {
         popup.style.display = 'none';
-      }
-    });
-    const popup2 = document.getElementById('popup2');
-    const openPopupButton2 = document.getElementById('openPopup2');
-    const closePopupButton2 = document.getElementById('closePopup2');
-
-    // Open the popup
-    openPopupButton2.addEventListener('click', () => {
-      popup2.style.display = 'flex';
-    });
-
-    // Close the popup
-    closePopupButton2.addEventListener('click', () => {
-      popup2.style.display = 'none';
-    });
-
-    // Close the popup when clicking outside the content
-    popup2.addEventListener('click', (e) => {
-      if (e.target === popup2) {
-        popup2.style.display = 'none';
       }
     });
 </script>

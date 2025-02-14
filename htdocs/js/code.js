@@ -164,6 +164,94 @@ function searchContacts(search, page) {
 	}
 }
 
+function addContact(){
+	let name = document.getElementById('ContactName').value;
+	let email = document.getElementById('ContactEmail').value;
+	let phone = document.getElementById('ContactPhone').value;
+	let tmp = {userId: userId, name: name, phone: phone, email: email};
+	let jsonPayload = JSON.stringify(tmp);
+	let url = urlBase + '/AddContact.' + extension;
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try {
+		xhr.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				let jsonObject = JSON.parse(xhr.responseText);
+
+				if (jsonObject.error != "") {
+					console.log(err);
+					return;
+				}
+
+				window.location.reload(true);
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch (err) {
+		console.log(err);
+	}
+}
+
+function updateContact(){
+	let name = document.getElementById('ContactName2').value;
+	let email = document.getElementById('ContactEmail2').value;
+	let phone = document.getElementById('ContactPhone2').value;
+	let id = document.getElementById('EditContact').dataset.id;
+	let tmp = {id: id, name: name, phone: phone, email: email};
+	let jsonPayload = JSON.stringify(tmp);
+	let url = urlBase + '/UpdateContact.' + extension;
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try {
+		xhr.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				let jsonObject = JSON.parse(xhr.responseText);
+
+				if (jsonObject.error != "") {
+					console.log(err);
+					return;
+				}
+
+				window.location.reload(true);
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch (err) {
+		console.log(err);
+	}
+}
+
+function removeContact(id){
+	let tmp = {id: id};
+	let jsonPayload = JSON.stringify(tmp);
+	let url = urlBase + '/DeleteeContact.' + extension;
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try {
+		xhr.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				let jsonObject = JSON.parse(xhr.responseText);
+
+				if (jsonObject.error != "") {
+					console.log(err);
+					return;
+				}
+
+				window.location.reload(true);
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch (err) {
+		console.log(err);
+	}
+}
+
 function buildTable(data) {
 	const table = document.getElementById('table');
 	table.style.visibility = 'visible';
@@ -192,7 +280,7 @@ function saveCookie() {
 
 function readCookie() {
 	userId = -1;
-	date = "Thu, 01 Jan 1970 00:00:00 GMT";
+	let date = "Thu, 01 Jan 1970 00:00:00 GMT";
 	let data = document.cookie;
 	let splits = data.split(",");
 	for (var i = 0; i < splits.length; i++) {
@@ -232,18 +320,22 @@ function signOut() {
 }
 function editContact(id, name, email, phone) {
 	const popup2 = document.getElementById('popup2');
-	const openPopupButton2 = document.getElementById('edit_' + id);
 	const closePopupButton2 = document.getElementById('closePopup2');
 
 	// Open the popup
 	document.getElementById('ContactName2').value = name;
 	document.getElementById('ContactEmail2').value = email;
 	document.getElementById('ContactPhone2').value = phone;
+	document.getElementById('EditContact').dataset.id = id
 	popup2.style.display = 'flex';
 
 	// Close the popup
 	closePopupButton2.addEventListener('click', () => {
 		popup2.style.display = 'none';
+		document.getElementById('ContactName2').value = "";
+		document.getElementById('ContactEmail2').value = "";
+		document.getElementById('ContactPhone2').value = "";
+		document.getElementById('EditContact').dataset.id = null;
 	});
 
 	// Close the popup when clicking outside the content
