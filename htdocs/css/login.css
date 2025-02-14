@@ -178,6 +178,8 @@ tr {
 }
 
 td:nth-child(even){
+    border-collapse: unset;
+    border-spacing: 1px;
     height: 45px;
     background-color: lightgoldenrodyellow
 }
