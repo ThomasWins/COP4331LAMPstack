@@ -35,7 +35,7 @@ function doLogin() {
 
 				saveCookie();
 
-				window.location.href = "contactsPage.html";
+				window.location.href = "contactsPage.html?search=%";
 			}
 		};
 		xhr.send(jsonPayload);
