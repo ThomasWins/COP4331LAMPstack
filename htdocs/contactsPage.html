@@ -10,20 +10,20 @@
     <div class="popup-container" id="popup1">
         <form class="popup-content" action="javascript:addContact()">
         <h2>Add Contact</h2>
-        <input type="text" id="ContactName" placeholder="Name" /><br />
-        <input type="email" id="ContactEmail" placeholder="Email" /><br />
-        <input type="tel" id="ContactPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" /><br />
-        <button  id="SaveContactAdd" type="submit">Add</button>
+        <input type="text" id="ContactName" placeholder="Name" required><br />
+        <input type="email" id="ContactEmail" placeholder="Email" required><br />
+        <input type="tel" id="ContactPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br />
+        <button  id="SaveContactAdd" type="submit" value="Add">
         <button class="close-btn" id="closePopup1">Close</button>
         </form>
     </div>
     <div class="popup-container" id="popup2">
         <form class="popup-content" action="javascript:updateContact()">
         <h2>Edit Contact</h2>
-        <input type="text" id="ContactName2" placeholder="Name" /><br />
-        <input type="email" id="ContactEmail2" placeholder="Email" /><br />
-        <input type="tel" id="ContactPhone2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" /><br />
-        <button  id="EditContact" type="submit">Edit</button>
+        <input type="text" id="ContactName2" placeholder="Name" required><br />
+        <input type="email" id="ContactEmail2" placeholder="Email" required><br />
+        <input type="tel" id="ContactPhone2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br />
+        <button  id="EditContact" type="submit" value="Update">
         <button class="close-btn" id="closePopup2">Close</button>
         </form>
     </div>
