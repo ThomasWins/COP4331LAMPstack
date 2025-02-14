@@ -275,5 +275,7 @@ th {
     justify-content: center;
     margin-left: 5%;
     text-align: center;
+    display: flex;
+
 }
 
