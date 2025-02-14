@@ -58,6 +58,7 @@
 }
 #page-back, #page-for{
     visibility: hidden;
+    margin-bottom: 50px;
 }
 
 #input-group{

@@ -168,6 +168,26 @@ function setArrows(count, page){
 		document.getElementById("page-for").style.visibility = "visible";
 }
 
+function pageForward(){
+	const urlParams = new URLSearchParams(window.location.search);
+	let page = urlParams.get('page')+1;
+	const search = urlParams.get('search');
+	if (search != null) {
+		if (page == null)
+			page = 1
+		searchContacts(search, page+1);
+	}
+}
+
+function pageBack(){
+	const urlParams = new URLSearchParams(window.location.search);
+	let page = urlParams.get('page')+1;
+	const search = urlParams.get('search');
+	if (search != null) {
+		searchContacts(search, page-1);
+	}
+}
+
 function addContact(){
 	let name = document.getElementById('ContactName').value;
 	let email = document.getElementById('ContactEmail').value;
