@@ -1,6 +1,15 @@
-#loginBody, #contactsBody {
+#loginBody {
     background-image: url("ucfimage.avif");
     display:flex;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+}
+
+#contactsBody {
+    background-image: url("ucfimage.avif");
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
