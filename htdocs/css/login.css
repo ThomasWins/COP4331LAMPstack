@@ -286,7 +286,7 @@ th {
 #searchError {
     color:#ff3e3e;
     font-size: 20px;
-    margin:auto;
+    margin-left:12px;
     border-radius:10px;
     padding:3px
 }
