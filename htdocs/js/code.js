@@ -123,6 +123,7 @@ function countContacts(search) {
 		console.log(err);
 	}
 	finally{
+		console.log(count);
 		return count;
 	}
 }
