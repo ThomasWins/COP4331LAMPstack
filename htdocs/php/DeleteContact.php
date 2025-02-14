@@ -2,7 +2,7 @@
 
     $inData = getRequestInfo();
 
-    $id = $inData["Id"];
+    $id = $inData["id"];
 
     $conn = new mysqli("localhost", "Group16", "CM2025Lamp!", "contact_manager");
 

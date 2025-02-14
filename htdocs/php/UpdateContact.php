@@ -2,7 +2,7 @@
 
     $inData = getRequestInfo();
 
-    $id = $inData["Id"];
+    $id = $inData["id"];
     $name = $inData["name"];
     $phone = $inData["phone"];
     $email = $inData["email"];

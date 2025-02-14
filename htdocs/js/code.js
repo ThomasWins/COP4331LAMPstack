@@ -199,7 +199,7 @@ function updateContact(){
 	let email = document.getElementById('ContactEmail2').value;
 	let phone = document.getElementById('ContactPhone2').value;
 	let id = document.getElementById('EditContact').dataset.id;
-	let tmp = {Id: id, name: name, phone: phone, email: email};
+	let tmp = {id: id, name: name, phone: phone, email: email};
 	let jsonPayload = JSON.stringify(tmp);
 	let url = urlBase + '/UpdateContact.' + extension;
 	let xhr = new XMLHttpRequest();
