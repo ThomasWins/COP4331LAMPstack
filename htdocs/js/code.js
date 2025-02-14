@@ -201,6 +201,7 @@ function updateContact(){
 	let id = document.getElementById('EditContact').dataset.id;
 	let tmp = {id: id, name: name, phone: phone, email: email};
 	let jsonPayload = JSON.stringify(tmp);
+	console.log(jsonPayload);
 	let url = urlBase + '/UpdateContact.' + extension;
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
