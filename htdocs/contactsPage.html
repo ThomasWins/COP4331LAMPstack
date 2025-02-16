@@ -29,7 +29,7 @@
     </div>
     <button type="button" id="signout" class="signOut" onclick="signOut();"> Sign Out </button>
     <div id="inner-body">
-      <h1>Contacts List</h1>
+      <h1><p style="font-family: Calibri">Contacts List</h1>
         <div id="input-group">
             <input type="search" id="search" placeholder="Search Contacts">
             <button type="button" id="search-all" class="buttons" onclick="search('%');">Search All</button>
@@ -48,14 +48,19 @@
                 <tbody id="contactsTableBody">
                 </tbody>
             </table>
-        <div>
+        </div>
         <div id="pageRow">
             <button type="button" id="page-back" class="buttons" onclick="pageBack();"> Previous Page</button>
             <button type="button" id="page-for" class="buttons" onclick="pageForward();"> Next Page</button>
         </div>
-        <div id="addContactDiv">
+        <div id="addContactDiv" style="display: flex; text-align: center; justify-content: center; width: 100%">
             <button type="button" id="openPopup1" class="buttons"> Add Contact </button>
         </div>
+    </div>
+    <div>
+        <a id="icons" href="https://icons8.com" style="display: block; text-align: center; margin-top: 50px;">
+            Icons by Icons8
+        </a>
     </div>
 </body>
 
