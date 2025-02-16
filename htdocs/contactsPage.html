@@ -34,7 +34,7 @@
             <input type="search" id="search" placeholder="Search Contacts">
             <button type="button" id="search-all" class="buttons" onclick="search('%');">Search All</button>
         </div>
-        <span id="searchError" style="text-align: center; background: rgba(255, 255, 255, 0.7); padding: 10px; border-radius: 5px; display: inline-block; font-size: 14px; color: black; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); margin-top: 10px;"></span>
+        <span id="searchError"></span>
         <div class="tableWrapper">
             <table class="cringe" id="table">
                 <thead>
@@ -48,19 +48,14 @@
                 <tbody id="contactsTableBody">
                 </tbody>
             </table>
-        </div>
+        <div>
         <div id="pageRow">
             <button type="button" id="page-back" class="buttons" onclick="pageBack();"> Previous Page</button>
             <button type="button" id="page-for" class="buttons" onclick="pageForward();"> Next Page</button>
         </div>
-        <div id="addContactDiv" style="display: flex; text-align: center; justify-content: center; width: 100%">
+        <div id="addContactDiv">
             <button type="button" id="openPopup1" class="buttons"> Add Contact </button>
         </div>
-    </div>
-    <div>
-        <a id="icons" href="https://icons8.com" style="display: block; text-align: center; margin-top: 50px;">
-            Icons by Icons8
-        </a>
     </div>
 </body>
 
