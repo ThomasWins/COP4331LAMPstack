@@ -33,8 +33,6 @@ function doLogin() {
 				}
 
 
-				saveCookie();
-
 				window.location.href = "contactsPage.html?search=%&page=1";
 			}
 		};
@@ -156,6 +154,7 @@ function searchContacts(search, page) {
 function setArrows(count, page){
 	if (count == 0) {
 		document.getElementById("searchError").innerHTML = "There don't seem to be any search results matching that criteria"
+		errorSpan.style.display = "inline-block";
 	}
 	else if (count < (page - 1) * 10) {
 		window.location.href = "contactsPage.html?search=" + search + "&page=" + Math.ceil(count / 10);
@@ -294,33 +293,7 @@ function buildTable(data) {
 
 	}
 }
-function saveCookie() {
-	let minutes = 20;
-	let date = new Date();
-	date.setTime(date.getTime() + (minutes * 60 * 1000));
-	document.cookie = "userId=" + userId + ";expires=" + date.toGMTString();
-}
 
-function readCookie() {
-	userId = -1;
-	let date = "Thu, 01 Jan 1970 00:00:00 GMT";
-	let data = document.cookie;
-	let splits = data.split(",");
-	for (var i = 0; i < splits.length; i++) {
-		let thisOne = splits[i].trim();
-		let tokens = thisOne.split("=");
-		if (tokens[0] == "userId") {
-			userId = parseInt(tokens[1].trim());
-		}
-		else if (tokens[0] == "expires") {
-			date = Date.parse(tokens[1].trim());
-		}
-	}
-	current = new Date();
-	if (userId < 0 || (date < current)) {
-		window.location.href = "index.html";
-	}
-}
 
 function checkQueries() {
 	const urlParams = new URLSearchParams(window.location.search);
