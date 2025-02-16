@@ -154,7 +154,6 @@ function searchContacts(search, page) {
 function setArrows(count, page){
 	if (count == 0) {
 		document.getElementById("searchError").innerHTML = "There don't seem to be any search results matching that criteria"
-		errorSpan.style.display = "inline-block";
 	}
 	else if (count < (page - 1) * 10) {
 		window.location.href = "contactsPage.html?search=" + search + "&page=" + Math.ceil(count / 10);
