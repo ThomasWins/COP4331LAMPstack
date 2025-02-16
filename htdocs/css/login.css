@@ -212,34 +212,37 @@ th {
 }
 
 .removeButton {
-    background-color: rgb(255, 0, 0);
-    border-width: 1.2px;
-    border-radius: 2px;
-    color:#FFFFFF;
-    width:25%;
-    margin-right: 25%;
+    background-color: transparent;
+    border: none;
+    width:30px;
+    height:30px;
+    background: url('icons8-trash-can-48.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
     transition: all ease-in-out .2s;
 }
 
 .removeButton:hover {
-    background-color: rgb(200, 0, 0);
-    cursor: pointer;
-    color: #FFFFFF;
+    background-color: transparent;
+    filter: brightness(0.8);
 }
+
 .updateButton {
-    background-color: rgb(101, 101, 101);
-    border-width: 1.2px;
-    border-radius: 2px;
-    color: #FFFFFF;
-    width: 50%;
+    background-color: transparent; 
+    border: none; 
+    width: 30px; 
+    height: 30px; 
+    background: url('icons8-edit-profile-40.png') no-repeat center center;
+    background-size: contain; 
+    cursor: pointer;
     transition: all ease-in-out .2s;
 }
 
 .updateButton:hover {
-    background-color: rgb(46, 46, 46);
-    cursor: pointer;
-    color: #FFFFFF;
+    background-color: transparent; 
+    filter: brightness(0.8); 
 }
+
 .signOut {
     background-color: rgb(180, 180, 180);
     border-width: 1.2px;
