@@ -147,12 +147,16 @@ input[type="search"]{
 /* Contacts Page */
 
 table {
-    width: 90%;
-    border-collapse: collapse;
+    width: 100%;
+    /* border-collapse: collapse; */
+    overflow: hidden;
     visibility: hidden;
     min-height: 30%;
-    margin-left: 5%;
     text-align: center;
+    border-radius: 25px;
+    border: 1px solid black;
+    border-spacing: 0; /* Removes extra gaps */
+    overflow: hidden; /* Ensures proper rounding */
 }
 
 h1 {
@@ -164,6 +168,8 @@ h1 {
 
 th,
 tr {
+    border-collapse: unset;
+    border-spacing: 1px;
     border: 1px solid black;
     background-color: #f2f2f2;
     padding: 8px;
@@ -171,7 +177,10 @@ tr {
     font-family: Verdana, sans-serif;
 }
 
-td:nth-child(even){
+tr:nth-child(even){
+    border-collapse: unset;
+    border-spacing: 1px;
+    border: 1px solid black;
     height: 45px;
     background-color: lightgoldenrodyellow
 }
@@ -203,34 +212,37 @@ th {
 }
 
 .removeButton {
-    background-color: rgb(255, 0, 0);
-    border-width: 1.2px;
-    border-radius: 2px;
-    color:#FFFFFF;
-    width:25%;
-    margin-right: 25%;
+    background-color: transparent;
+    border: none;
+    width:30px;
+    height:30px;
+    background: url('icons8-trash-can-48.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
     transition: all ease-in-out .2s;
 }
 
 .removeButton:hover {
-    background-color: rgb(200, 0, 0);
-    cursor: pointer;
-    color: #FFFFFF;
+    background-color: transparent;
+    filter: brightness(0.8);
 }
+
 .updateButton {
-    background-color: rgb(101, 101, 101);
-    border-width: 1.2px;
-    border-radius: 2px;
-    color: #FFFFFF;
-    width: 50%;
+    background-color: transparent; 
+    border: none; 
+    width: 30px; 
+    height: 30px; 
+    background: url('icons8-edit-profile-40.png') no-repeat center center;
+    background-size: contain; 
+    cursor: pointer;
     transition: all ease-in-out .2s;
 }
 
 .updateButton:hover {
-    background-color: rgb(46, 46, 46);
-    cursor: pointer;
-    color: #FFFFFF;
+    background-color: transparent; 
+    filter: brightness(0.8); 
 }
+
 .signOut {
     background-color: rgb(180, 180, 180);
     border-width: 1.2px;
@@ -267,5 +279,21 @@ th {
   .CreateButton{
     font-size: 20pt;
   }
+  .tableWrapper {
+    width: 90%;
+    justify-content: center;
+    margin-left: 5%;
+    text-align: center;
+}
 
+#searchError {
+    color:#ff3e3e;
+    font-size: 20px;
+    margin-left:12px;
+    border-radius:10px;
+    padding:3px
+}
 
+#openPopup1 {
+    margin-right:10%;
+}

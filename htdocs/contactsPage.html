@@ -30,24 +30,26 @@
     </div>
     <button type="button" id="signout" class="signOut" onclick="signOut();"> Sign Out </button>
     <div id="inner-body">
-      <h1>Contacts List</h1>
+      <h1><p style="font-family: Calibri">Contacts List</h1>
         <div id="input-group">
             <input type="search" id="search" placeholder="Search Contacts">
             <button type="button" id="search-all" class="buttons" onclick="search('%');">Search All</button>
         </div>
         <span id="searchError"></span>
-        <table id="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="contactsTableBody">
-            </tbody>
-        </table>
+        <div class="tableWrapper">
+            <table class="cringe" id="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="contactsTableBody">
+                </tbody>
+            </table>
+        <div>
         <div id="pageRow">
             <button type="button" id="page-back" class="buttons" onclick="pageBack();"> Previous Page</button>
             <button type="button" id="page-for" class="buttons" onclick="pageForward();"> Next Page</button>

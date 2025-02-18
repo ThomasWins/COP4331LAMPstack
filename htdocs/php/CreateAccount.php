@@ -27,7 +27,7 @@
             $stmt = $conn->prepare("INSERT into users (Username,Password) VALUES(?,?)");
             $stmt->bind_param("ss", $username, $password);
             $stmt->execute();
-            returnWithError("");
+            returnWithInfo();
         }
         $stmt->close();
         $conn->close();
@@ -50,9 +50,9 @@
 		sendResultInfoAsJson( $retValue );
 	}
 	
-	function returnWithInfo($id)
+	function returnWithInfo()
 	{
-		$retValue = '{"id":"' . $id . '","error":""}';
+		$retValue = '{"message": "account created successfully","error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
