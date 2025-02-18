@@ -288,8 +288,8 @@ function buildTable(data) {
 			'<td>' + row.Email + '</td>' +
 			'<td>' + row.Phone + '</td>' +
 			'<td>' +
-			'<button type="button" id="remove_' + row.ID + '" class="settings" onclick="removeContact(' + row.ID + ');">Remove</button>' +
-			'<button type="button" id="edit_' + row.ID + '" class="editContact" onclick="editContact(' + row.ID + ', \'' + row.Name + '\', \'' + row.Email + '\', \'' + row.Phone + '\');">Edit</button>' +
+			'<button type="button" id="remove_' + row.ID + '" class="settings" onclick="removeContact(' + row.ID + ');"><i class="material-icons">delete</i></button>' +
+			'<button type="button" id="edit_' + row.ID + '" class="editContact" onclick="editContact(' + row.ID + ', \'' + row.Name + '\', \'' + row.Email + '\', \'' + row.Phone + '\');"><i class="material-icons">edit</i></button>' +
 		'</td>';
 
 	}
