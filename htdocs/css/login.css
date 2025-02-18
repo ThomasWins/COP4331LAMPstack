@@ -210,7 +210,10 @@ th {
     width: 100%;
     margin-top: 20px;
 }
-
+.buttonBox {
+    display: flex;
+    justify-content: space-evenly;
+}
 .removeButton {
     background-color: transparent;
     border: none;
@@ -236,7 +239,6 @@ th {
     background-size: contain; 
     cursor: pointer;
     transition: all ease-in-out .2s;
-    margin-right: 5px;
 }
 
 .updateButton:hover {
