@@ -1,6 +1,6 @@
 # Login & Contact Page Website
 
-This project demonstrates the integration of APIs, databases, HTML, CSS, and PHP to build a functional login system and contact page.
+Group project that demonstrates the integration of APIs, databases, HTML, CSS, and PHP to build a functional login system and contact page.
 
 ## Features
 
