@@ -14,3 +14,4 @@ Group project that demonstrates the integration of APIs, databases, HTML, CSS, a
   
 
 This project highlights the seamless interaction between frontend and backend technologies to create a secure and efficient web experience.
+ 
